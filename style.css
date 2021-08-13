@@ -1,0 +1,18 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .wrapper .producto {
+    border-style: solid;
+    border-color: black;
+    border-radius: 20px;
+    border-width: thin;
+    padding: 1rem;
+    background-color: cornsilk;
+  }
