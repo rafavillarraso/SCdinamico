@@ -1,3 +1,30 @@
+@font-face {
+    font-family: "sharp";
+    src: url(fonts/SharpGrotesk-Light20.otf);
+  }
+
+  @font-face {
+    font-family: "sharpB";
+    src: url(fonts/SharpGrotesk-Medium20.otf);
+  }
+
+
+body {
+    background-color:sandybrown;
+}
+
+header h2 {
+      font-family: "sharpB";
+      text-align: center;
+      color: white;
+  }
+
+header h4 {
+    font-family: "sharp";
+    text-align: center;
+    color: white;
+    line-height: 0.2rem;
+}
 .wrapper {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -8,11 +35,23 @@
     margin-right: auto;
   }
 
-  .wrapper .producto {
-    border-style: solid;
-    border-color: black;
+  .wrapper .producto, .wrapper2 div {
     border-radius: 20px;
-    border-width: thin;
     padding: 1rem;
-    background-color: cornsilk;
+    background-color:lightyellow;
+  }
+
+  .wrapper2 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .wrapper2 div {
+      min-height: 200px;
+      margin-top: 1rem;
   }
