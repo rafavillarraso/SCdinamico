@@ -13,74 +13,68 @@
         <h4>Arrastra el producto a la cesta para comprar</h4>
     </header>
     <section class="wrapper">
-        <div class="producto" draggable="true">
-            <img src="images/bayas.svg" alt="bayas">
+        <div class="producto" data-precio="3.00" id="bayas">
+            <img src="images/bayas.svg">
             <div class="precio"><p>3 €</p></div>
         </div>
-        <div class="producto">
-            <img src="images/berenjena.svg" alt="berenjenas">
+        <div class="producto" data-precio="2.00" id="berenjenas">
+            <img src="images/berenjena.svg" >
             <div class="precio"><p>2 €</p></div>
         </div>
-        <div class="producto">
-            <img src="images/brocoli.svg" alt="brocoli">
+        <div class="producto" data-precio="2.50" id="brocoli">
+            <img src="images/brocoli.svg">
             <div class="precio"><p>2,5 €</p></div>
         </div>
-        <div class="producto">
-            <img src="images/cayena.svg" alt="cayena">
+        <div class="producto" data-precio="4.00" id="cayena">
+            <img src="images/cayena.svg" >
             <div class="precio"><p>4 €</p></div>
         </div>
-        <div class="producto">
-            <img src="images/cebolla.svg" alt="cebolla">
+        <div class="producto" data-precio="3.20" id="cebolla">
+            <img src="images/cebolla.svg" >
             <div class="precio"><p>3,2 €</p></div>
         </div>
-        <div class="producto">
-            <img src="images/cerezas.svg" alt="cerezas">
+        <div class="producto" data-precio="5.00" id="cerezas">
+            <img src="images/cerezas.svg" >
             <div class="precio"><p>5 €</p></div>
         </div>
-        <div class="producto">
-            <img src="images/champis.svg" alt="champis">
+        <div class="producto" data-precio="4.00" id="champis">
+            <img src="images/champis.svg">
             <div class="precio"><p>4 €</p></div>
         </div>
-        <div class="producto">
-            <img src="images/fresa.svg" alt="fresa">
+        <div class="producto" data-precio="2.50" id="fresa">
+            <img src="images/fresa.svg">
             <div class="precio"><p>2,5 €</p></div>
         </div>
-        <div class="producto">
-            <img src="images/limon.svg" alt="limon">
+        <div class="producto" data-precio="3.00" id="limon">
+            <img src="images/limon.svg">
             <div class="precio"><p>3 €</p></div>
         </div>
-        <div class="producto">
-            <img src="images/manzana.svg" alt="manzana">
+        <div class="producto" data-precio="2.50" id="manzana">
+            <img src="images/manzana.svg">
             <div class="precio"><p>2,5 €</p></div>
         </div>
-        <div class="producto">
-            <img src="images/pepino.svg" alt="pepino">
+        <div class="producto" data-precio="3.70" id="pepino">
+            <img src="images/pepino.svg">
             <div class="precio"><p>3,7 €</p></div>
         </div>
-        <div class="producto">
-            <img src="images/pim_amarillo.svg" alt="pim_amarillo">
+        <div class="producto" data-precio="3.00" id="pim_amarillo">
+            <img src="images/pim_amarillo.svg">
             <div class="precio"><p>3 €</p></div>
-        </div>
-        <div class="producto">
-            <img src="images/pim_verde.svg" alt="pim_verde">
-            <div class="precio"><p>5 €</p></div>
-        </div>
-        <div class="producto">
-            <img src="images/pomelo.svg" alt="pomelo">
-            <div class="precio"><p>4 €</p></div>
-        </div>
-        <div class="producto">
-            <img src="images/rabano.svg" alt="rabano">
-            <div class="precio"><p>4,5 €</p></div>
-        </div>
-        <div class="producto">
-            <img src="images/zanahoria.svg" alt="zanahoria">
-            <div class="precio"><p>2 €</p></div>
         </div>
     </section>
     <section class="wrapper2">
-        <div class="cesta"><img src="images/cesta-01.svg" alt="cesta"></div>
+        <div class="cesta">
+            <img class="cesta-soltar" src="images/cesta-01.svg" alt="cesta">
+            <div class="total-cont">
+                Total:
+                <div id="total"></div>
+                <button>Vaciar</button>
+            </div>
+        </div>
+        
+        
     </section>
-    
+   
+ <script src="script.js"></script>   
 </body>
 </html>

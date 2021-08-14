@@ -17,6 +17,7 @@ body {
 }
 
 header {
+  margin-top: 3rem;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
@@ -30,10 +31,10 @@ header h2 {
 
 header h4 {
   font-family: "sharp";
-  text-align: center;
+  text-align: left;
   color: white;
   line-height: 0.2rem;
-  text-align: left;
+  
 }
 .wrapper {
     display: grid;
@@ -49,7 +50,6 @@ header h4 {
     border-radius: 20px;
     padding: 1rem;
     background-color:lightyellow;
-    aspect-ratio: 1;
   }
 
 .desc, .precio {
@@ -57,7 +57,7 @@ header h4 {
 }
 .wrapper2 {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
   max-width: 800px;
   margin-left: auto;
@@ -68,9 +68,29 @@ header h4 {
 .wrapper2 div {
   border-radius: 20px;
   padding: 1rem;
+}
+
+.wrapper2 img {
+  padding: 1rem;
+}
+
+.cesta {
   background-color:chocolate;
+  text-align: center;
+}
+
+.total-cont {
+  background-color: cornsilk;
 }
 
 .wrapper2 div img {
-  padding: 1rem;
+  padding: 2rem;
+}
+
+.wrapper2 button {
+  padding: 10px;
+}
+
+.total {
+  font-size: 1.2rem;
 }
