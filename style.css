@@ -8,50 +8,69 @@
     src: url(fonts/SharpGrotesk-Medium20.otf);
   }
 
+  * {
+    font-family: "sharp";
+  }
 
 body {
     background-color:sandybrown;
 }
 
+header {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 header h2 {
-      font-family: "sharpB";
-      text-align: center;
-      color: white;
+  font-family: "sharpB";
+  text-align: left;
+  color: white;
   }
 
 header h4 {
-    font-family: "sharp";
-    text-align: center;
-    color: white;
-    line-height: 0.2rem;
+  font-family: "sharp";
+  text-align: center;
+  color: white;
+  line-height: 0.2rem;
+  text-align: left;
 }
 .wrapper {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     grid-gap: 10px;
     grid-auto-rows: minmax(100px, auto);
-    max-width: 500px;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
   }
 
-  .wrapper .producto, .wrapper2 div {
+.wrapper .producto {
     border-radius: 20px;
     padding: 1rem;
     background-color:lightyellow;
+    aspect-ratio: 1;
   }
 
-  .wrapper2 {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 10px;
-    grid-auto-rows: minmax(100px, auto);
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+.desc, .precio {
+  text-align: center;
+}
+.wrapper2 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 10px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+}
 
-  .wrapper2 div {
-      min-height: 200px;
-      margin-top: 1rem;
-  }
+.wrapper2 div {
+  border-radius: 20px;
+  padding: 1rem;
+  background-color:chocolate;
+}
+
+.wrapper2 div img {
+  padding: 1rem;
+}
