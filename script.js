@@ -44,6 +44,18 @@ function dragStart(e) {
     console.log('drag starts...')
 }
 
+const cestas = document.querySelectorAll('.cesta-soltar');
+
+cestas.forEach(cesta => {
+    cesta.addEventListener('dragenter', dragEnter)
+    cesta.addEventListener('dragover', dragOver);
+    cesta.addEventListener('dragleave', dragLeave);
+    cesta.addEventListener('drop', drop);
+});
+
+function drop {
+    
+}
 
 // function mostrarProducto() {
 //     console.log (precioBayas)
