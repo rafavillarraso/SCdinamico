@@ -53,9 +53,6 @@ cestas.forEach(cesta => {
     cesta.addEventListener('drop', drop);
 });
 
-function drop {
-    
-}
 
 // function mostrarProducto() {
 //     console.log (precioBayas)

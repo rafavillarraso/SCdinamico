@@ -74,6 +74,10 @@ header h4 {
   padding: 1rem;
 }
 
+.wrapper2-while img {
+  opacity: 50%;
+}
+
 .cesta {
   background-color:chocolate;
   text-align: center;
