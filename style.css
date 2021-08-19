@@ -98,3 +98,13 @@ header h4 {
 .total {
   font-size: 1.2rem;
 }
+
+.hovered {
+  background-color:rgba(0,0,0, 0.3);
+  border-color: white;
+  border-radius: 1rem;
+}
+
+ul {
+  list-style-type: none;
+}

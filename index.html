@@ -13,63 +13,66 @@
         <h4>Arrastra el producto a la cesta para comprar</h4>
     </header>
     <section class="wrapper">
-        <div class="producto" data-precio="3.00" id="bayas">
-            <img src="images/bayas.svg">
+        <div class="producto" data-precio="3.00" data-nombre="Bayas" id="bayas" draggable="true">
+            <img src="images/bayas.svg" draggable="false">
             <div class="precio"><p>3 €</p></div>
         </div>
-        <div class="producto" data-precio="2.00" id="berenjenas">
-            <img src="images/berenjena.svg" >
+        <div class="producto" data-precio="2.00" data-nombre="Berenjenas" id="berenjenas" draggable="true">
+            <img src="images/berenjena.svg" draggable="false">
             <div class="precio"><p>2 €</p></div>
         </div>
-        <div class="producto" data-precio="2.50" id="brocoli">
-            <img src="images/brocoli.svg">
+        <div class="producto" data-precio="2.50" data-nombre="Brocoli" id="brocoli" draggable="true">
+            <img src="images/brocoli.svg" draggable="false">
             <div class="precio"><p>2,5 €</p></div>
         </div>
-        <div class="producto" data-precio="4.00" id="cayena">
-            <img src="images/cayena.svg" >
+        <div class="producto" data-precio="4.00" data-nombre="Cayena" id="cayena" draggable="true">
+            <img src="images/cayena.svg" draggable="false">
             <div class="precio"><p>4 €</p></div>
         </div>
-        <div class="producto" data-precio="3.20" id="cebolla">
-            <img src="images/cebolla.svg" >
+        <div class="producto" data-precio="3.20" data-nombre="Cebolla" id="cebolla" draggable="true">
+            <img src="images/cebolla.svg" draggable="false">
             <div class="precio"><p>3,2 €</p></div>
         </div>
-        <div class="producto" data-precio="5.00" id="cerezas">
-            <img src="images/cerezas.svg" >
+        <div class="producto" data-precio="5.00" data-nombre="Cerezas" id="cerezas" draggable="true">
+            <img src="images/cerezas.svg" draggable="false">
             <div class="precio"><p>5 €</p></div>
         </div>
-        <div class="producto" data-precio="4.00" id="champis">
-            <img src="images/champis.svg">
+        <div class="producto" data-precio="4.00" data-nombre="Champis" id="champis" draggable="true">
+            <img src="images/champis.svg" draggable="false">
             <div class="precio"><p>4 €</p></div>
         </div>
-        <div class="producto" data-precio="2.50" id="fresa">
-            <img src="images/fresa.svg">
+        <div class="producto" data-precio="2.50" data-nombre="Fresa" id="fresa" draggable="true">
+            <img src="images/fresa.svg" draggable="false">
             <div class="precio"><p>2,5 €</p></div>
         </div>
-        <div class="producto" data-precio="3.00" id="limon">
-            <img src="images/limon.svg">
+        <div class="producto" data-precio="3.00" data-nombre="Limon" id="limon" draggable="true">
+            <img src="images/limon.svg" draggable="false">
             <div class="precio"><p>3 €</p></div>
         </div>
-        <div class="producto" data-precio="2.50" id="manzana">
-            <img src="images/manzana.svg">
+        <div class="producto" data-precio="2.50" data-nombre="Manzana" id="manzana" draggable="true">
+            <img src="images/manzana.svg" draggable="false">
             <div class="precio"><p>2,5 €</p></div>
         </div>
-        <div class="producto" data-precio="3.70" id="pepino">
-            <img src="images/pepino.svg">
+        <div class="producto" data-precio="3.70" data-nombre="bayas" id="pepino" draggable="true">
+            <img src="images/pepino.svg" draggable="false">
             <div class="precio"><p>3,7 €</p></div>
         </div>
-        <div class="producto" data-precio="3.00" id="pim_amarillo">
-            <img src="images/pim_amarillo.svg">
+        <div class="producto" data-precio="3.00" data-nombre="bayas" id="pim_amarillo" draggable="true">
+            <img src="images/pim_amarillo.svg" draggable="false">
             <div class="precio"><p>3 €</p></div>
         </div>
     </section>
     <section class="wrapper2">
         <div class="cesta">
-            <img class="cesta-soltar" src="images/cesta-01.svg" alt="cesta">
+            <img class="cesta-soltar" src="images/cesta-01.svg" alt="cesta" draggable="false">
             <div class="total-cont">
                 Total:
-                <div id="total"></div>
-                <button>Vaciar</button>
+                <div><span id="total">0</span><span> €</span></div>
+                <button id="vaciar">Vaciar</button>
             </div>
+        </div>
+        <div id="lista">
+            <ul></ul>
         </div>
     </section>
    
