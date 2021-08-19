@@ -1,83 +1,72 @@
-//definir el precio de cada producto:
-let productoBayas = document.getElementById('bayas')
-let precioBayas = parseInt(productoBayas.getAttribute('data-precio'))
+window.onload = function () {
+    
+    const articulos = document.querySelectorAll('.producto');
+    const cesta = document.querySelector('.cesta-soltar');
+    const totalMostrado = document.getElementById('total');
+    const botonVaciar = document.getElementById('vaciar');
+    const articulosCesta = document.getElementById('lista');
+    
 
-let productoBerenjenas = document.getElementById('berenjenas')
-let precioBerenjenas = parseInt(productoBerenjenas.getAttribute('data-precio'))
+    let total = parseFloat(totalMostrado.innerHTML);
+    if (isNaN(total)) {
+        total = 0;
+    }
+    
+    // Funciones drag and drop
+    const dragOver = function (e) {
+        // Ref: https://developer.cdn.mozilla.net/en-US/docs/Web/API/Document/dragover_event
+        e.preventDefault();
+    };
+    
+    const dragEnter = function (e) {
+        e.preventDefault();
+        this.className += " hovered";
+    };
 
-let productoBrocoli = document.getElementById('brocoli')
-let precioBrocoli = parseInt(productoBrocoli.getAttribute('data-precio'))
+    const dragLeave = function () {
+        this.classList.remove("hovered");
+    };
+    
+    const dragDrop = function (e) {
+        console.log('soltando elemento...');
+        this.classList.remove("hovered");
+        // Cambiar precio cesta
+        let precio = parseFloat(e.dataTransfer.getData("precio"));
+        total = total + precio;
+        totalMostrado.innerHTML = total.toFixed(1);
+        // Actualizar lista
+        let li = document.createElement('li');
+        li.textContent = e.dataTransfer.getData("nombre");
+        articulosCesta.appendChild(li);
+    };
+    
+    const dragStart = function (e) {
+        console.log('cogiendo elemento...');
+        let precioArticulo = parseFloat(this.getAttribute('data-precio'));
+        e.dataTransfer.setData("precio", precioArticulo);
+        let nombreArticulo = this.getAttribute('data-nombre');
+        e.dataTransfer.setData("nombre", nombreArticulo);
+    }
 
-let productoCayena = document.getElementById('cayena')
-let precioCayena = parseInt(productoCayena.getAttribute('data-precio'))
+    // Vaciar cesta
+    const vaciarCesta = function () {
+        total = 0;
+        totalMostrado.innerHTML = total;
+        articulosCesta.innerHTML = '';
+        console.log('cesta vaciada');
+    }
 
-let productoCebolla = document.getElementById('cebolla')
-let precioCebolla = parseInt(productoCebolla.getAttribute('data-precio'))
+    // Asignación de eventos
+    if (cesta) {
+        cesta.addEventListener("dragover", dragOver);
+        cesta.addEventListener("dragenter", dragEnter);
+        cesta.addEventListener("dragleave", dragLeave);
+        cesta.addEventListener("drop", dragDrop);
+    }
 
-let productoCerezas = document.getElementById('cerezas')
-let precioCerezas = parseInt(productoCerezas.getAttribute('data-precio'))
+    articulos.forEach(articulo => {
+        articulo.addEventListener('dragstart', dragStart);
+    });
 
-let productoChampis = document.getElementById('champis')
-let precioChampis = parseInt(productoChampis.getAttribute('data-precio'))
-
-let productoFresa = document.getElementById('fresa')
-let precioFresa = parseInt(productoFresa.getAttribute('data-precio'))
-
-let productoLimon = document.getElementById('limon')
-let precioLimon = parseInt(productoLimon.getAttribute('data-precio'))
-
-let productoManzana = document.getElementById('manzana')
-let precioManzana = parseInt(productoManzana.getAttribute('data-precio'))
-
-let productoPepino = document.getElementById('pepino')
-let precioPepino = parseInt(productoPepino.getAttribute('data-precio'))
-
-let productoPimamarillo = document.getElementById('pim_amarillo')
-let precioPimamarillo = parseInt(productoPimamarillo.getAttribute('data-precio'))
-
-
-const item = document.querySelector('.producto');
-
-item.addEventListener('dragstart', dragStart);
-
-function dragStart(e) {
-    console.log('drag starts...')
+    botonVaciar.addEventListener('click', vaciarCesta);
 }
-
-const cestas = document.querySelectorAll('.cesta-soltar');
-
-cestas.forEach(cesta => {
-    cesta.addEventListener('dragenter', dragEnter)
-    cesta.addEventListener('dragover', dragOver);
-    cesta.addEventListener('dragleave', dragLeave);
-    cesta.addEventListener('drop', drop);
-});
-
-
-// function mostrarProducto() {
-//     console.log (precioBayas)
-// }
-
-// mostrarProducto()
-
-// const sumaBayas = precioBayas + 5
-
-// console.log(sumaBayas)
-
-
-// document.getElementById("total").innerHTML = x;
-
-// let producto = document.getElementById('bayas');
-
-// let nombre = producto.getAttribute('id');
-
-// let precioProducto = parseInt(producto.getAttribute('data-precio'))
-
-
-// function verId () {
-//     console.log ('El producto ' + nombre + ' cuesta ' + precioProducto + ' euros.') ;
-//     document.getElementById('total').innerHTML = precioProducto;
-// }
-
-// verId ()
-
