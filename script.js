@@ -6,10 +6,9 @@ window.onload = function () {
     const botonVaciar = document.getElementById('vaciar');
     const articulosCesta = document.getElementById('lista');
     
-
     let total = parseFloat(totalMostrado.innerHTML);
     if (isNaN(total)) {
-        total = 0;
+        total = 0.00;
     }
     
     // Funciones drag and drop
@@ -33,7 +32,7 @@ window.onload = function () {
         // Cambiar precio cesta
         let precio = parseFloat(e.dataTransfer.getData("precio"));
         total = total + precio;
-        totalMostrado.innerHTML = total.toFixed(1);
+        totalMostrado.innerHTML = total.toFixed(2);
         // Actualizar lista
         let li = document.createElement('li');
         li.textContent = e.dataTransfer.getData("nombre");
