@@ -105,6 +105,28 @@ header h4 {
   border-radius: 1rem;
 }
 
-ul {
-  list-style-type: none;
+.contenedor-lista {
+  background-color:cornsilk;
+}
+
+.contenedor-lista h3 {
+  text-align: center;
+}
+
+button {
+  background-color: white;
+  border-radius: 50px;
+  border-width:thin;
+  width: 100px;
+
+}
+
+#aviso-cesta-vacia {
+  color: rgba(0,0,0, 0.5);
+  text-align: center;
+  font-size: small;
+}
+
+.aviso-cesta-vacia-no {
+  display: none;
 }

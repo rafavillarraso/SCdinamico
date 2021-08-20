@@ -6,9 +6,9 @@ window.onload = function () {
     const botonVaciar = document.getElementById('vaciar');
     const articulosCesta = document.getElementById('lista');
     
-    let total = parseFloat(totalMostrado.innerHTML);
+    let total = parseInt(totalMostrado.innerHTML);
     if (isNaN(total)) {
-        total = 0.00;
+        total = 0;
     }
     
     // Funciones drag and drop
@@ -37,6 +37,10 @@ window.onload = function () {
         let li = document.createElement('li');
         li.textContent = e.dataTransfer.getData("nombre");
         articulosCesta.appendChild(li);
+        // Quitar aviso de cesta vacía
+        let aviso = document.getElementById('aviso-cesta-vacia');
+        aviso.className += " aviso-cesta-vacia-no";
+
     };
     
     const dragStart = function (e) {
@@ -50,9 +54,11 @@ window.onload = function () {
     // Vaciar cesta
     const vaciarCesta = function () {
         total = 0;
-        totalMostrado.innerHTML = total;
+        totalMostrado.innerHTML = total.toFixed(2);
         articulosCesta.innerHTML = '';
         console.log('cesta vaciada');
+        let aviso = document.getElementById('aviso-cesta-vacia');
+        aviso.classList.remove("aviso-cesta-vacia-no");
     }
 
     // Asignación de eventos
